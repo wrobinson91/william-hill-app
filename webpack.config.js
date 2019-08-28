@@ -7,7 +7,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.jsx', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
   devtool: 'inline-source-map',
   devServer: {
