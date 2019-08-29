@@ -1,7 +1,13 @@
+@import 'variables';
+
 .team-selection {
-  background-color: green;
+  background-color: $dark-color-transparent;
   align-self: center;
   order: 10;
+  border: 1px solid $off-white-1;
+  border-bottom: none;
+  border-radius: 6;
+  color: $details-font;
 
   h4 {
     text-align: center;

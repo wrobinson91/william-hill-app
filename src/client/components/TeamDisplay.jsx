@@ -37,8 +37,8 @@ const TeamDisplay = (props) => {
               </p>
             </section>
             <section className="stadium-info">
-              <h3>Where They Play</h3>
               <img src={stadium.image} alt={`${name}-stadium`} />
+              <h3>Where They Play</h3>
               <p>
                 <BoldedLabel label="Name:" />
                 {' '}
@@ -61,8 +61,8 @@ const TeamDisplay = (props) => {
               </p>
             </section>
             <section className="team-story-container">
-              <h3>Team Story</h3>
               <img src={fanArtEmbed} alt={`${name}-fan-art`} />
+              <h3>Team Story</h3>
               <p className="team-story">{description}</p>
             </section>
           </>
