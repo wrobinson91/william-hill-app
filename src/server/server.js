@@ -14,4 +14,6 @@ const PORT = 3000;
 
 app.post('/api', getTeamData, parseTeamData, (req, res) => res.status(200).json(res.locals.teamData));
 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+const openServer = app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+module.exports = openServer;

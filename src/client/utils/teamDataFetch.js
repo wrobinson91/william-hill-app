@@ -1,5 +1,7 @@
 import fetch from 'node-fetch';
 
+// const testPathPrefix = true ? 'http://localhost:3000' : '';
+
 const teamDataFetch = (teamName, setTeamInfo) => {
   fetch('/api', {
     method: 'POST',

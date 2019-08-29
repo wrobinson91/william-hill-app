@@ -4,7 +4,7 @@ const URL = 'https://www.thesportsdb.com/api/v1/json/1/searchteams.php';
 
 const teamDataController = {
   getTeamData: (req, res, next) => {
-    // console.log('middleware hit');
+    console.log('first middleware hit');
     const { teamName } = req.body;
 
     fetch(`${URL}?t=${teamName}`)

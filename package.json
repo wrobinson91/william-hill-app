@@ -7,12 +7,17 @@
     "start": "nodemon ./src/server/server.js",
     "build": "NODE_ENV=production webpack & nodemon ./src/server/server.js",
     "dev": "NODE_ENV=development webpack-dev-server --hot & nodemon ./src/server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose"
+  },
+  "jest": {
+    "globalSetup": "./jest-setup.js",
+    "globalTeardown": "./jest-teardown.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Will Robinson",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -26,11 +31,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
     "hot-module-replacement": "^3.0.3",
@@ -39,6 +46,7 @@
     "react-test-renderer": "^16.9.0",
     "sass-loader": "^7.3.1",
     "style-loader": "^1.0.0",
+    "supertest": "^4.0.2",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
