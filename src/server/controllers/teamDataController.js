@@ -34,6 +34,9 @@ const teamDataController = {
       strTeamBadge,
       strStadiumThumb,
       strTeamFanart1,
+      strFacebook,
+      strTwitter,
+      strInstagram,
     } = res.locals.unparsedTeamData;
 
     res.locals.teamData = {
@@ -52,6 +55,9 @@ const teamDataController = {
       description: strDescriptionEN,
       badge: strTeamBadge,
       fanArtEmbed: strTeamFanart1,
+      facebookURL: strFacebook,
+      instagramURL: strInstagram,
+      twitterURL: strTwitter,
     };
     next();
   },

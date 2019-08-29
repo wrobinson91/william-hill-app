@@ -3,7 +3,7 @@ import BoldedLabel from './styled/BoldedLabel';
 
 const TeamDisplay = (props) => {
   const {
-    name, yearFormed, league, manager, stadium, website, description, badge, fanArtEmbed,
+    name, yearFormed, league, manager, stadium, website, description, badge, fanArtEmbed, facebookURL, twitterURL, instagramURL,
   } = props.teamInfo;
   return (
     <section className="team-info-display">
@@ -30,9 +30,22 @@ const TeamDisplay = (props) => {
                 {manager}
               </p>
               <p>
-                <BoldedLabel label="Website" />
+                <BoldedLabel label="Website:" />
                 {' '}
                 <a href={`http://${website}`}>{website}</a>
+              </p>
+              <p>
+                <BoldedLabel label="Social Media:" />
+                {' '}
+                <a href={`http://${facebookURL || website}`}>Facebook</a>
+                {' '}
+                |
+                {' '}
+                <a href={`http://${twitterURL || website}`}>Twitter</a>
+                {' '}
+                |
+                {' '}
+                <a href={`http://${instagramURL || website}`}>Instagram</a>
               </p>
             </section>
             <section className="stadium-info">

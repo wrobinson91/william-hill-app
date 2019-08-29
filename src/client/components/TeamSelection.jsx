@@ -36,14 +36,17 @@ const TeamSelection = (props) => {
           </label>
         </div>
 
-        <label>
-          Team:
-          <select name="pickTeam" id="pick-team-select" value={inputTeamInfo.team} onChange={() => setInputTeamInfo({ ...inputTeamInfo, team: event.target.value })}>
-            {inputTeamInfo.league && teamOptions[inputTeamInfo.league].map((team, idx) => <option key={`team-option-${idx}`} value={team}>{team}</option>)}
-          </select>
-        </label>
-
-        <input type="submit" value="Submit" />
+        <div>
+          <label>
+            Team:
+            <select name="pickTeam" id="pick-team-select" value={inputTeamInfo.team} onChange={() => setInputTeamInfo({ ...inputTeamInfo, team: event.target.value })}>
+              {inputTeamInfo.league && teamOptions[inputTeamInfo.league].map((team, idx) => <option key={`team-option-${idx}`} value={team}>{team}</option>)}
+            </select>
+          </label>
+        </div>
+        <div>
+          <input type="submit" value="SUBMIT" />
+        </div>
       </form>
     </section>
   );
