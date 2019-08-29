@@ -34,6 +34,8 @@ const teamDataController = {
       strWebsite,
       strDescriptionEN,
       strTeamBadge,
+      strStadiumThumb,
+      strTeamFanart1,
     } = res.locals.unparsedTeamData;
     // const { unparsedTeamData } = res.locals;
     // console.log('got unparsed data: ', res.locals.unparsedTeamData);
@@ -47,10 +49,12 @@ const teamDataController = {
         description: strStadiumDescription,
         location: strStadiumLocation,
         capacity: intStadiumCapacity,
+        image: strStadiumThumb,
       },
       website: strWebsite,
       description: strDescriptionEN,
       badge: strTeamBadge,
+      fanArtEmbed: strTeamFanart1,
     };
     // console.log('res locals: in final middleware', res.locals.teamData);
     next();

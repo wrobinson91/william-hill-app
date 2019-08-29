@@ -5,7 +5,7 @@ import TeamInfoContainer from '../containers/TeamInfoContainer';
 
 const App = () => (
   <>
-    <h1>Find Your Team</h1>
+    <h1>Team Primer</h1>
     <TeamInfoContainer />
   </>
 );

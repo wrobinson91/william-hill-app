@@ -20,7 +20,7 @@ const TeamInfoContainer = () => {
 
   return (
     <section className="team-info-container">
-      <h1>{teamInfo.name}</h1>
+      {/* <h1>{teamInfo.name}</h1> */}
       <TeamSelection setTeamInfo={setTeamInfo} />
       <TeamDisplay teamInfo={teamInfo} />
     </section>

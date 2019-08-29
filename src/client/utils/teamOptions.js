@@ -146,7 +146,7 @@ const teamsObject = {
     'DC United',
     'FC Dallas',
     'Houston Dynamo',
-    'LA Galaxy',
+    'L.A. Galaxy',
     'Los Angeles FC',
     'Minnesota United',
     'Montreal Impact',
