@@ -1,4 +1,5 @@
-import subject from '../src/client/utils/teamDataFetch';
+// import subject from '../src/client/utils/teamDataFetch';
+import fetch from './__mocks__/fetch.mock';
 
 describe('testing API calls', () => {
   let mockState = null;
@@ -7,12 +8,12 @@ describe('testing API calls', () => {
     mockState = Object.assign({}, newState);
   };
 
-  it('successful call should return response object', async () => {
+  xit('successful call should return response object', async () => {
     console.log('wip');
     // await global.testServer;
-    // console.log('mock state before call: ', mockState);
-    // await subject('Sacramento Kings', setStateMock);
-    // console.log('mock state after call: ', mockState);
-    // expect(mockState).not.toBe(null);
+    console.log('mock state before call: ', mockState);
+    await fetch('Sacramento Kings', setStateMock);
+    console.log('mock state after call: ', mockState);
+    expect(mockState).not.toBe(null);
   });
 });
