@@ -8,9 +8,9 @@ const newTeamData = {
 const fetch = (bodyString, setter) => new Promise((resolve, reject) => {
   if (bodyString === newTeamData.name) {
     setter(newTeamData);
-    return resolve('data found');
+    return resolve('Data found.');
   }
-  return reject('unable to find data');
+  return reject(Error('Unable to find data.'));
 });
 
 let mockState = null;
@@ -29,22 +29,17 @@ describe('testing API calls', () => {
   };
 
   it('successful call should return response object', async () => {
-    console.log('wip');
-    // await global.testServer;
-    console.log('mock state before call: ', mockState);
     await fetch('Sacramento Kings', setStateMock);
-    console.log('mock state after call: ', mockState);
     expect(mockState).not.toBe(null);
   });
 
 
   it('unsuccessful call should return error', async () => {
-    console.log('wip');
-    // await global.testServer;
-    console.log('mock state before call: ', mockState);
-    await fetch('Sacramento Kings', setStateMock);
-    console.log('mock state after call: ', mockState);
-    expect(mockState).not.toBe(null);
+    try {
+      fetch('Saramento Kings', setStateMock);
+    } catch (err) {
+      expect(err instanceof Error).toBeTruthy();
+    }
   });
 });
 
