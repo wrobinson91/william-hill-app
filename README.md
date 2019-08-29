@@ -24,11 +24,11 @@ __Using the Application__
 
 Once you're at the application screen, the initial view (Sacramento Kings) is pulled from the API.
 
-<p align="center">
+<!-- <p align="center">
 <img src="./assets/api_on_first_load.gif" style="width: 700px;">
-</p>
+</p> -->
 
-If you wish to select another team, first select a league. Then, select a team from the second dropdown menu and hit submit: 
+If you wish to select another team, first select a league. Then, select a team from the second dropdown menu and hit submit. 
 
 <!-- <p align="center">
 <img src="./assets/api_new_team.gif" style="width: 700px;">
