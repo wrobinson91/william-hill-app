@@ -22,30 +22,32 @@ const TeamSelection = (props) => {
         body: JSON.stringify({ teamName: inputTeamInfo.team }),
       })
         .then(res => res.json())
-        .then(data => console.log('here some data: ', data))
+        .then((fetchedTeamData) => {
+          console.log('here\'s some data: ', fetchedTeamData);
+          setTeamInfo(fetchedTeamData);
+        })
         .catch((e) => {
           console.log('Error in fetch process: ', e);
         });
     }
   };
 
-  console.log('in team selection. inputTeamInfo: ', inputTeamInfo);
   return (
-    <article>
+    <article className="team-selection">
       time to pick a team
       <form onSubmit={onSubmit}>
 
         <label>
           League:
           <select name="pickLeague" id="pickLeague" defaultValue="-" value={inputTeamInfo.league} onChange={() => setInputTeamInfo({ ...inputTeamInfo, league: event.target.value, team: '-' })}>
-            {Object.keys(teamOptions).map((league, idx) => <option value={league}>{league}</option>)}
+            {Object.keys(teamOptions).map((league, idx) => <option key={`league-option-${idx}`} value={league}>{league}</option>)}
           </select>
         </label>
 
         <label>
           Team:
           <select name="pickTeam" id="pickTeam" value={inputTeamInfo.team} onChange={() => setInputTeamInfo({ ...inputTeamInfo, team: event.target.value })}>
-            {inputTeamInfo.league && teamOptions[inputTeamInfo.league].map((team, idx) => <option value={team}>{team}</option>)}
+            {inputTeamInfo.league && teamOptions[inputTeamInfo.league].map((team, idx) => <option key={`team-option-${idx}`} value={team}>{team}</option>)}
           </select>
         </label>
 

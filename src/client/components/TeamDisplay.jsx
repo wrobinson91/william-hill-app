@@ -1,12 +1,22 @@
 import React from 'react';
 
 const TeamDisplay = (props) => {
-  const { teamInfo } = props;
-  console.log('rendering team display');
+  const {
+    name, yearFormed, league, manager, stadium, website, description, badge,
+  } = props.teamInfo;
+  console.log('rendering team display. name: ', name);
   return (
-    <article>
+    <section className="team-info-display">
       This Is Team Display
-    </article>
+      {name
+        && (
+        <>
+          <h2>{name}</h2>
+          <img src={`${badge}`} alt={`${name}-team-badge`} />
+        </>
+        )
+      }
+    </section>
   );
 };
 

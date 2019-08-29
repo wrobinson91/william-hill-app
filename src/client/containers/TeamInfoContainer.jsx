@@ -6,13 +6,21 @@ import TeamDisplay from '../components/TeamDisplay';
 const TeamInfoContainer = () => {
   const [teamInfo, setTeamInfo] = useState({
     teamData: {
-      name: null,
+      name: '',
+      yearFormed: -1,
+      league: '',
+      manager: '',
+      stadium: {
+      },
+      website: '',
+      description: '',
+      badge: '',
     },
   });
 
   return (
-    <section>
-      This is the Team Info Container
+    <section className="team-info-container">
+      <h1>{teamInfo.name}</h1>
       <TeamSelection setTeamInfo={setTeamInfo} />
       <TeamDisplay teamInfo={teamInfo} />
     </section>
