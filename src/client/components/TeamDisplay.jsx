@@ -5,7 +5,6 @@ const TeamDisplay = (props) => {
   const {
     name, yearFormed, league, manager, stadium, website, description, badge, fanArtEmbed,
   } = props.teamInfo;
-  // console.log('rendering team display. name: ', name);
   return (
     <section className="team-info-display">
       {name

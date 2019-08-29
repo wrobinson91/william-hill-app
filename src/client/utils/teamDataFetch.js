@@ -12,11 +12,9 @@ const teamDataFetch = (teamName, setTeamInfo) => {
   })
     .then(res => res.json())
     .then((fetchedTeamData) => {
-      // console.log('fetched team data: ', fetchedTeamData );
       setTeamInfo(fetchedTeamData);
     })
     .catch((e) => {
-      // console.log('Error in fetch process: ', e);
       throw new Error(e);
     });
 };
