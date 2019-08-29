@@ -22,3 +22,20 @@ If you wish, you may build the file by running the following and going to `http:
 
 __Using the Application__
 
+Once you're at the application screen, the initial view (Sacramento Kings) is pulled from the API.
+
+TKImg
+
+If you wish to select another team, first select a league:
+
+TKImg
+
+Then, select a team from the second dropdown menu and hit submit: 
+
+tkIMG
+
+__Testing__
+
+Jest and Enzyme tests were written for the client-side fetch reuqest and the rendering of particular React components. Run them with the command:
+
+`npm test`
