@@ -25,8 +25,6 @@ describe('React unit tests', () => {
     });
 
     it('Renders a span tag with interior text that matches the props', () => {
-      // testing here
-      // testing
       expect(wrapper.type()).toEqual('span');
       expect(wrapper.text()).toEqual('Test Label:');
     });
@@ -67,10 +65,26 @@ describe('React unit tests', () => {
       },
     };
 
-    let wrapper;
+    let shallowWrapper;
+    let mountedWrapper;
 
     beforeAll(() => {
-      wrapper = shallow(<TeamDisplay {...props} />);
+      shallowWrapper = shallow(<TeamDisplay {...props} />);
+      mountedWrapper = mount(<TeamDisplay {...props} />);
+    });
+
+    describe('snapshot testing', () => {
+      it('renders correctly', () => {
+        const tree = renderer
+          .create(<TeamDisplay {...props} />)
+          .toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    });
+
+    it('should render four section components', () => {
+      const sections = shallowWrapper.find('section');
+      expect(sections).toHaveLength(4);
     });
   });
 });
