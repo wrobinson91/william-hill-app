@@ -24,15 +24,15 @@ __Using the Application__
 
 Once you're at the application screen, the initial view (Sacramento Kings) is pulled from the API.
 
-TKImg
+<p align="center">
+<img src="./assets/api_on_first_load.gif" style="width: 700px;">
+</p>
 
-If you wish to select another team, first select a league:
+If you wish to select another team, first select a league. Then, select a team from the second dropdown menu and hit submit: 
 
-TKImg
-
-Then, select a team from the second dropdown menu and hit submit: 
-
-tkIMG
+<!-- <p align="center">
+<img src="./assets/api_new_team.gif" style="width: 700px;">
+</p> -->
 
 __Testing__
 
