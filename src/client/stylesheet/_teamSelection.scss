@@ -1,0 +1,48 @@
+@import 'variables';
+
+.team-selection {
+  background-color: $dark-color-transparent;
+  align-self: center;
+  order: 10;
+  border: 1px solid $off-white-1;
+  border-bottom: none;
+  border-radius: 6;
+  color: $details-font;
+
+  h4 {
+    text-align: center;
+  }
+
+  input {
+    background-color: $accent-color;
+    border: 1px solid black;
+    border-radius: 5;
+    width: 100%;
+    color: $dark-color;
+    font-size: 1.5rem;
+  }
+
+  input:hover {
+    background-color: $dark-color;
+    color: $accent-color;
+  }
+
+  input:active {
+    background-color: $dark-color-active;
+    color: $accent-color-active;
+  }
+
+  #pick-team-select {
+    width: 145px;
+    text-align-last: center;
+   
+    option {
+      text-align: center;
+    }
+  }
+
+  #pick-league-select {
+    text-align-last: center;
+  }
+ 
+}

@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React unit tests TeamDisplay unit test snapshot testing renders correctly 1`] = `
+<section
+  className="team-info-display"
+>
+  <h2>
+    Sacramento Kings
+  </h2>
+  <img
+    alt="Sacramento Kings-team-badge"
+    src="http://www.testurl-badge.com/"
+  />
+  <section
+    className="quick-facts-display"
+  >
+    <h3>
+      Quick Facts
+    </h3>
+    <p>
+      <span
+        className="bolded-label"
+      >
+        League:
+      </span>
+       
+      NBA
+    </p>
+    <p>
+      <span
+        className="bolded-label"
+      >
+        Year founded:
+      </span>
+       
+      1925
+    </p>
+    <p>
+      <span
+        className="bolded-label"
+      >
+        Coach:
+      </span>
+       
+      Will Robinson
+    </p>
+    <p>
+      <span
+        className="bolded-label"
+      >
+        Website
+      </span>
+       
+      <a
+        href="http://http://www.testurl-teamsite.com/"
+      >
+        http://www.testurl-teamsite.com/
+      </a>
+    </p>
+  </section>
+  <section
+    className="stadium-info"
+  >
+    <img
+      alt="Sacramento Kings-stadium"
+    />
+    <h3>
+      Where They Play
+    </h3>
+    <p>
+      <span
+        className="bolded-label"
+      >
+        Name:
+      </span>
+       
+    </p>
+    <p>
+      <span
+        className="bolded-label"
+      >
+        Location:
+      </span>
+       
+    </p>
+    <p>
+      <span
+        className="bolded-label"
+      >
+        Capacity:
+      </span>
+       
+    </p>
+    <p>
+      <span
+        className="bolded-label"
+      >
+        The story:
+      </span>
+       
+    </p>
+  </section>
+  <section
+    className="team-story-container"
+  >
+    <img
+      alt="Sacramento Kings-fan-art"
+      src="http://www.testurl-fanart.com/"
+    />
+    <h3>
+      Team Story
+    </h3>
+    <p
+      className="team-story"
+    >
+      This is a description for a team, test.
+    </p>
+  </section>
+</section>
+`;

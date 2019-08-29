@@ -1,10 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/client/index.js',
+  entry: {
+    polyfill: 'babel-polyfill',
+    app: './src/client/index.js',
+  },
   output: {
     path: path.resolve('build'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
+    chunkFilename: '[id].[chunkhash].js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
