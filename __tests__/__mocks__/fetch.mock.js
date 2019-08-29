@@ -42,6 +42,3 @@ describe('testing API calls', () => {
     }
   });
 });
-
-
-// export default fetch;

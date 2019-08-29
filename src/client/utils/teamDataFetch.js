@@ -16,7 +16,7 @@ const teamDataFetch = (teamName, setTeamInfo) => {
       setTeamInfo(fetchedTeamData);
     })
     .catch((e) => {
-      console.log('Error in fetch process: ', e);
+      // console.log('Error in fetch process: ', e);
       throw new Error(e);
     });
 };

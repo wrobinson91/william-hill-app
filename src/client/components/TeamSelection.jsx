@@ -24,7 +24,7 @@ const TeamSelection = (props) => {
   };
 
   return (
-    <article className="team-selection">
+    <section className="team-selection">
       <h4>Pick a team</h4>
       <form onSubmit={onSubmit}>
         <div>
@@ -45,7 +45,7 @@ const TeamSelection = (props) => {
 
         <input type="submit" value="Submit" />
       </form>
-    </article>
+    </section>
   );
 };
 
