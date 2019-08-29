@@ -8,12 +8,30 @@ import App from '../src/client/components/App';
 import TeamInfoContainer from '../src/client/containers/TeamInfoContainer';
 import TeamDisplay from '../src/client/components/TeamDisplay';
 import TeamSelection from '../src/client/components/TeamSelection';
+import BoldedLabel from '../src/client/components/styled/BoldedLabel';
 
 configure({ adapter: new Adapter() });
 
 
 describe('React unit tests', () => {
   // tests to go here
+
+  describe('Bolded Label unit test', () => {
+    let wrapper;
+    const props = { label: 'Test Label:' };
+
+    beforeAll(() => {
+      wrapper = shallow(<BoldedLabel {...props} />);
+    });
+
+    it('Renders a span tag with interior text that matches the props', () => {
+      // testing here
+      // testing
+      expect(wrapper.type()).toEqual('span');
+      expect(wrapper.text()).toEqual('Test Label:');
+    });
+  });
+
   describe('TeamInfoContainer unit test', () => {
     let shallowWrapper;
     let mountedWrapper;
@@ -28,6 +46,31 @@ describe('React unit tests', () => {
       expect(shallowWrapper.hasClass('team-info-container')).toBeTruthy();
       expect(shallowWrapper.find(TeamDisplay).text()).toBe('<TeamDisplay />');
       expect(shallowWrapper.find(TeamSelection).text()).toBe('<TeamSelection />');
+    });
+  });
+
+  describe('TeamDisplay unit test', () => {
+    // const addCardMock = jest.fn();
+    // const deleteCardMock = jest.fn();
+
+    const props = {
+      teamInfo: {
+        name: 'Sacramento Kings',
+        yearFormed: 1925,
+        league: 'NBA',
+        manager: 'Will Robinson',
+        stadium: 'Testing Stadium',
+        website: 'http://www.testurl-teamsite.com/',
+        description: 'This is a description for a team, test.',
+        badge: 'http://www.testurl-badge.com/',
+        fanArtEmbed: 'http://www.testurl-fanart.com/',
+      },
+    };
+
+    let wrapper;
+
+    beforeAll(() => {
+      wrapper = shallow(<TeamDisplay {...props} />);
     });
   });
 });
