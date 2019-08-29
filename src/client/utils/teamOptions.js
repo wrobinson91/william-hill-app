@@ -1,5 +1,9 @@
 const teamsObject = {
+  '-': [
+    '-',
+  ],
   NFL: [
+    '-',
     'Arizona Cardinals',
     'Atlanta Falcons',
     'Baltimore Ravens',
@@ -34,6 +38,7 @@ const teamsObject = {
     'Washington Redskins',
   ],
   NBA: [
+    '-',
     'Atlanta Hawks',
     'Boston Celtics',
     'Brooklyn Nets',
@@ -66,6 +71,7 @@ const teamsObject = {
     'Washington Wizards',
   ],
   MLB: [
+    '-',
     'Arizona Diamondbacks',
     'Atlanta Braves',
     'Baltimore Orioles',
@@ -98,6 +104,7 @@ const teamsObject = {
     'Washington Nationals',
   ],
   NHL: [
+    '-',
     'Anaheim Ducks',
     'Arizona Coyotes',
     'Boston Bruins',
@@ -131,6 +138,7 @@ const teamsObject = {
     'Winnipeg Jets',
   ],
   MLS: [
+    '-',
     'Atlanta United',
     'Chicago Fire',
     'Colorado Rapids',
